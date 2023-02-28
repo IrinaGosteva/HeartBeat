@@ -1,6 +1,0 @@
-dist
-node_modules
-gulpfile.js
-src/sass
-package-lock.json
-package.json
