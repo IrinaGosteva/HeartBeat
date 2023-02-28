@@ -134,7 +134,9 @@
             />
             <label for="exampleInputPhone"></label>
             <input
-              type="number"
+              type="tel" name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
               class="form-control"
               id="exampleInputPhone"
               aria-describedby="phoneHelp"
