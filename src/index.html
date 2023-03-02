@@ -954,7 +954,6 @@
               </div>
             </div>
           </div>
-
       </div>
     </section>
     <section class="customers-reviews">
@@ -1019,6 +1018,87 @@
         </div>
       </div>
     </section>
+    <div class="overlay d-none">
+      <div class="modal d-none" id="consultation">
+        <div class="modal__close">&times;</div>
+        <h3 class="modal__subtitle">Just fill out the application form</h3>
+        <div class="modal__description">and we will call you back within 10 minutes</div>
+        <form>
+          <div class="img-bg-section__form">
+            <label for="exampleInputName"></label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="nameHelp"
+              placeholder="Name"
+            />
+            <label for="exampleInputPhone"></label>
+            <input
+              type="tel" name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+              class="form-control"
+              id="exampleInputPhone"
+              aria-describedby="phoneHelp"
+              placeholder="Phone"
+            />
+            <label for="exampleInputEmail1"></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+          </div>
+          <button class="btn btn_red" type="submit">Submit form</button>
+        </form>
+
+      </div>
+      <div class="modal d-none" id="order">
+        <div class="modal__close">&times;</div>
+        <h3 class="modal__subtitle">Your order:</h3>
+        <div class="modal__description">Ladies Watch With Leather Watchband</div>
+        <form>
+          <div class="img-bg-section__form">
+            <label for="exampleInputName"></label>
+            <input
+              type="text"
+              class="form-control"
+              id="exampleInputName"
+              aria-describedby="nameHelp"
+              placeholder="Name"
+            />
+            <label for="exampleInputPhone"></label>
+            <input
+              type="tel" name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              required
+              class="form-control"
+              id="exampleInputPhone"
+              aria-describedby="phoneHelp"
+              placeholder="Phone"
+            />
+            <label for="exampleInputEmail1"></label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email"
+            />
+          </div>
+          <button class="btn btn_red" type="submit">Buy</button>
+        </form>
+
+      </div>
+      <div class="modal d-none" id="thank-you-notification">
+        <div class="modal__close">&times;</div>
+        <h3 class="modal__subtitle">Thank you for your application!</h3>
+        <div class="modal__description">Наш менеджер свяжется с вами в ближайшее время!</div>
+      </div>
+    </div>
     <script
       type="text/javascript"
       src="https://code.jquery.com/jquery-1.11.0.min.js"
