@@ -48,9 +48,6 @@ $(document).ready(function () {
   const order = document.getElementById("order");
   const modalDescriptionText = order.querySelector(".modal__description");
 
-  console.log(itemBtn);
-  // open and close modal windows
-
   function mapItem(collection, fn) {
     [...collection].map((item) => {
       item.addEventListener("click", (e) => {
