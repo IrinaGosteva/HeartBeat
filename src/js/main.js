@@ -38,45 +38,20 @@ $(document).ready(function () {
   });
 
   //modal window
-  const buttonsCallBack = document.querySelectorAll(
-    "[data-modal='consultation']"
-  );
-  const overlay = document.querySelector(".overlay");
-  const modalClose = document.querySelectorAll(".modal__close");
-  const consultation = document.querySelector(".modal");
-  const itemBtn = document.querySelectorAll(".catalog-item .btn_sm");
-  const order = document.getElementById("order");
-  const modalDescriptionText = order.querySelector(".modal__description");
 
-  function mapItem(collection, fn) {
-    [...collection].map((item) => {
-      item.addEventListener("click", (e) => {
-        fn(e.target);
-      });
-    });
-  }
+  $('[data-modal=consultation]').on('click', function(){
+    $('.overlay, #consultation').fadeIn('slow');
+  });
 
-  function openModal() {
-    overlay.classList.remove("d-none");
-    consultation.classList.remove("d-none");
-  }
+  $('.modal__close').on('click', function(){
+    $('.overlay, #consultatin, #order, #thank-you-notification').fadeOut('slow')
+  });
 
-  function closeModal() {
-    overlay.classList.add("d-none");
-    order.classList.add("d-none");
-  }
-
-  function getTitle(target) {
-    const catalogCardTitle = target.parentNode.parentNode.querySelector(
-      ".catalog__card-title"
-    );
-    modalDescriptionText.textContent = catalogCardTitle.textContent;
-    overlay.classList.remove("d-none");
-    order.classList.remove("d-none");
-  }
-
-  mapItem(buttonsCallBack, openModal);
-  mapItem(modalClose, closeModal);
-  mapItem(itemBtn, getTitle);
-
+  $('.catalog-item .btn_sm').each(function(i) {
+    $(this).on('click', function() {
+      $('#order .modal__description').text($('.catalog__card-title').eq(i).text());
+      $('.overlay, #order').fadeIn('slow');
+    })
+  });
+git 
 });
