@@ -39,19 +39,56 @@ $(document).ready(function () {
 
   //modal window
 
-  $('[data-modal=consultation]').on('click', function(){
-    $('.overlay, #consultation').fadeIn('slow');
+  $("[data-modal=consultation]").on("click", function () {
+    $(".overlay, #consultation").fadeIn("slow");
   });
 
-  $('.modal__close').on('click', function(){
-    $('.overlay, #consultatin, #order, #thank-you-notification').fadeOut('slow')
+  $(".modal__close").on("click", function () {
+    $(".overlay, #consultatin, #order, #thank-you-notification").fadeOut(
+      "slow"
+    );
   });
 
-  $('.catalog-item .btn_sm').each(function(i) {
-    $(this).on('click', function() {
-      $('#order .modal__description').text($('.catalog__card-title').eq(i).text());
-      $('.overlay, #order').fadeIn('slow');
-    })
+  $(".catalog-item .btn_sm").each(function (i) {
+    $(this).on("click", function () {
+      $("#order .modal__description").text(
+        $(".catalog__card-title").eq(i).text()
+      );
+      $(".overlay, #order").fadeIn("slow");
+    });
   });
-git 
+
+
+  //form validation
+
+  function validateForm(value) {
+    $(value).validate({
+      rules: {
+        name: {
+            required: true,
+            minlength: 2
+        },
+        phone: "required",
+        email: {
+            required: true,
+            email: true
+        }
+    },
+    messages: {
+        name: {
+            required: "Please, enter your name",
+            minlength: jQuery.validator.format("It should be more than {0} characters!")
+          },
+        phone: "Please, enter your phone number",
+        email: {
+          required: "Please, enter your email",
+          email: "The email address is wrong"
+        }
+    }
+    });
+  }
+
+  validateForm("#order form");
+  validateForm(".img-bg-section form");
+  validateForm("#consultation form");
 });
