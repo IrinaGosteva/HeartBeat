@@ -128,32 +128,18 @@
           Just fill out the application form and we will call&nbsp;you&nbsp;back
           within 10 minutes
         </h3>
-        <form>
+        <form >
           <div class="img-bg-section__form">
-            <label for="exampleInputName"></label>
             <input
-              type="text"
-              class="form-control"
-              id="exampleInputName"
-              aria-describedby="nameHelp"
+              type="text" name="name"
               placeholder="Name"
             />
-            <label for="exampleInputPhone"></label>
             <input
-              type="tel" name="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required
-              class="form-control"
-              id="exampleInputPhone"
-              aria-describedby="phoneHelp"
+              type="phone" name="phone"
               placeholder="Phone"
             />
-            <label for="exampleInputEmail1"></label>
             <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              type="email" name="email"
               placeholder="Email"
             />
           </div>
@@ -1031,32 +1017,18 @@
         <div class="modal__description">and we will call you back within 10 minutes</div>
         <form>
           <div class="img-bg-section__form">
-            <label for="exampleInputName"></label>
             <input
-              type="text"
-              class="form-control"
-              id="exampleInputName"
-              aria-describedby="nameHelp"
-              placeholder="Name"
-            />
-            <label for="exampleInputPhone"></label>
-            <input
-              type="tel" name="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required
-              class="form-control"
-              id="exampleInputPhone"
-              aria-describedby="phoneHelp"
-              placeholder="Phone"
-            />
-            <label for="exampleInputEmail1"></label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Email"
-            />
+            type="text" name="name"
+            placeholder="Name"
+          />
+          <input
+            type="tel" name="phone"
+            placeholder="Phone"
+          />
+          <input
+            type="email" name="email"
+            placeholder="Email"
+          />
           </div>
           <button class="btn btn_red" type="submit">Submit form</button>
         </form>
@@ -1066,38 +1038,23 @@
         <div class="modal__close">&times;</div>
         <h3 class="modal__subtitle">Your order:</h3>
         <div class="modal__description">Ladies Watch With Leather Watchband 1</div>
-        <form>
+        <form action="#">
           <div class="img-bg-section__form">
-            <label for="exampleInputName"></label>
             <input
-              type="text"
-              class="form-control"
-              id="exampleInputName"
-              aria-describedby="nameHelp"
+              type="text" name="name"
               placeholder="Name"
             />
-            <label for="exampleInputPhone"></label>
             <input
               type="tel" name="phone"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-              required
-              class="form-control"
-              id="exampleInputPhone"
-              aria-describedby="phoneHelp"
               placeholder="Phone"
             />
-            <label for="exampleInputEmail1"></label>
             <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              type="email" name="email"
               placeholder="Email"
             />
           </div>
           <button class="btn btn_red" type="submit">Buy</button>
         </form>
-
       </div>
       <div class="modal d-none" id="thank-you-notification">
         <div class="modal__close">&times;</div>
@@ -1110,15 +1067,16 @@
       src="https://code.jquery.com/jquery-1.11.0.min.js"
     ></script>
     <script
-      type="text/javascript"
-      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
     ></script>
     <script type="text/javascript" src="js/slick.min.js"></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"
     ></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
