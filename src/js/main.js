@@ -91,4 +91,7 @@ $(document).ready(function () {
   validateForm("#order form");
   validateForm(".img-bg-section form");
   validateForm("#consultation form");
+
+  //maska for phone
+  $("input[name=phone]").mask("+1 999-999-9999");
 });
